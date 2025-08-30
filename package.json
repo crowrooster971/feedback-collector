@@ -1,0 +1,15 @@
+{
+  "name": "feedback-collector",
+  "version": "1.0.0",
+  "description": "Un outil simple pour recueillir et analyser les retours des utilisateurs via des formulaires en ligne.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "body-parser": "^1.19.0",
+    "mongoose": "^5.11.15"
+  }
+}
