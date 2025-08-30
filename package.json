@@ -11,5 +11,7 @@
     "express": "^4.17.1",  // Framework web pour Node.js
     "body-parser": "^1.19.0",  // Middleware pour gérer les corps de requête
     "mongoose": "^5.11.15"  // ODM pour MongoDB
-  }
+  },
+  "author": "Votre Nom ici",  // Nom de l'auteur
+  "license": "MIT"  // License du projet
 }
