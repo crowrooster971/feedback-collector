@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Collector</title>
+</head>
+<body>
+    <h1>Formulaire de Feedback</h1>
+    <form id="feedbackForm">
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" required></textarea><br>
+        <button type="submit">Soumettre</button>
+    </form>
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const response = await fetch('/api/feedback', {
+                method: 'POST',
+                body: JSON.stringify(Object.fromEntries(formData)),
+                headers: {'Content-Type': 'application/json'}
+            });
+            if (response.ok) {
+                alert('Feedback soumis avec succès !');
+                this.reset();
+            } else {
+                alert('Erreur lors de la soumission du feedback.');
+            }
+        });
+    </script>
+</body>
+</html>
