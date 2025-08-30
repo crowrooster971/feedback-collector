@@ -4,12 +4,12 @@
   "description": "Un outil simple pour recueillir et analyser les retours des utilisateurs via des formulaires en ligne.",
   "main": "src/app.js",
   "scripts": {
-    "start": "node src/app.js",
-    "test": "echo \"Erreur : aucun test spécifié\" && exit 1"
+    "start": "node src/app.js",  // Commande pour démarrer l'application
+    "test": "echo \"Erreur : aucun test spécifié\" && exit 1"  // Message d'erreur à afficher si aucun test n'est spécifié
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "body-parser": "^1.19.0",
-    "mongoose": "^5.11.15"
+    "express": "^4.17.1",  // Framework web pour Node.js
+    "body-parser": "^1.19.0",  // Middleware pour gérer les corps de requête
+    "mongoose": "^5.11.15"  // ODM pour MongoDB
   }
 }
